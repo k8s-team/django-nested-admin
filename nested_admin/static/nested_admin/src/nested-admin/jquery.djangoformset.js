@@ -82,14 +82,14 @@ class DjangoFormset {
         }
         $el.find(this.opts.addButtonSelector).off('click.djnesting').on('click.djnesting', function(e) {
             e.preventDefault();
-            e.stopPropagation();
+            //e.stopPropagation();
             self.add();
         });
         $el.find(this.opts.removeButtonSelector).filter(function() {
             return !$(this).closest('.djn-empty-form').length;
         }).off('click.djnesting').on('click.djnesting', function(e) {
             e.preventDefault();
-            e.stopPropagation();
+            // e.stopPropagation();
             var $form = $(this).closest(self.opts.formClassSelector);
             self.remove($form);
         });
